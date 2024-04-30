@@ -1,0 +1,15 @@
+:root{
+    --font-principal: "Josefin Sans";
+    --font-segundaria: "Protest Guerrilla";
+
+    --cor-body: #040E27;
+    --cor-footer: #041746;
+    --cor-primaria: #35b1f8;
+    --cor-segundaria: #001692;
+    --cor-icones: #001692;
+}
+
+body{
+    font-family: var(--font-principal);
+    background-color: var(--cor-body);
+}

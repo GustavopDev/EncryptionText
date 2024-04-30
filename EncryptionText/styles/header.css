@@ -1,0 +1,156 @@
+.header{
+    display: flex;
+    justify-content: space-around;
+    margin: 6em 6em 0 6em;
+}
+
+.titulo-header h1{
+    font-size: 48px;
+    color: var(--cor-segundaria);
+    font-family: var(--font-segundaria);
+}
+.titulo-header i{
+    font-size: 48px;
+    color: var(--cor-primaria);
+}
+
+.conteudo-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rede-header{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rede-header{
+    font-size: 25px;
+    color: var(--cor-icones);
+    margin-right: 0.8em;
+    padding: 0.5em 0.4em 0.4em 0.45em;
+    border: 1px solid var(--cor-icones);
+    border-radius: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.rede-header {
+    position: relative; 
+}
+
+.rede-header::before {
+    content: "";
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: -40px;
+    top: 102%;
+    background-color: var(--cor-icones);
+    padding: 0.3em;
+}
+
+.rede-header:hover i {
+    color: var(--cor-body);
+    transform: scale(1.1);
+}
+
+.rede-header:hover::before {
+    animation: desloca .5s;
+    left: 0;
+    top: 0;
+}
+
+@keyframes desloca {
+    0% {
+        left: 100%;
+        top: 0%;
+    }
+    100% {
+        left: 0;
+        top: 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header{
+        display: block;
+    }
+
+    .titulo-header h1{
+        text-align: center;
+        padding-bottom: 0.2em;
+        font-size: 8vw;
+    }
+
+    .titulo-header i{
+        text-align: center;
+        padding-bottom: 0.2em;
+        font-size: 8vw;
+    }
+
+    .rede-header{
+        margin: 0.5em 0.5em 0 0.5em;
+
+    }
+}
+
+@media (max-width: 550px){
+    .rede-header{
+        font-size: 20px;
+    }
+
+    .header{
+        margin-top: 5em;
+    }
+}
+
+@media (max-width: 450px){
+    .rede-header{
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 408px) {
+    .header {
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+        margin: 3em 1em 0 1em; 
+    }
+
+    .titulo-header h1 {
+        font-size: 30px; 
+        text-align: center; 
+    }
+
+    .titulo-header i {
+        font-size: 30px; 
+    }
+
+    .conteudo-header {
+        flex-direction: column;
+        margin-top: 1em;
+    }
+
+    .rede-header {
+        font-size: 20px;
+        margin-right: 0.4em;
+        padding: 0.3em;
+    }
+
+    .rede-header::before {
+        width: 25px;
+        height: 25px;
+        left: -30px;
+    }
+
+    .rede-header:hover::before {
+        animation: desloca .5s;
+        left: 0;
+        top: 0;
+    }
+}
+

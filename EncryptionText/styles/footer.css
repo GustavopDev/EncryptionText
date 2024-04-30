@@ -1,0 +1,213 @@
+.container-footer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: var(--font-principal);
+}
+
+.texto-footer h1{
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0.5em 0;
+    color: var(--cor-segundaria);
+}
+
+.texto-footer p{
+    width: 700px;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 3em;
+    color: var(--cor-primaria);
+}
+
+.icon-email{
+    display: flex;
+    margin: 0 auto 0.6em auto;
+    font-size: 60px;
+    padding: 0.3em 0 0.1em 0.2em;
+    border-radius: 100%;
+    width: 80px;
+    border: 2px solid var(--cor-icones);
+    position: relative;
+    overflow: hidden;
+}
+
+.icon-email i {
+    position: relative; 
+    color: var(--cor-icones);
+}
+
+.icon-email::before {
+    content: "";
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: -66px;
+    top: 102%;
+    background-color: var(--cor-icones);
+    padding: 0.3em 0 0 0.2em;
+}
+
+.icon-email:hover i {
+    color: var(--cor-body);
+    transform: scale(1.2);
+}
+
+.icon-email:hover::before {
+    animation: desloca .5s;
+    left: 0;
+    top: 0;
+}
+
+@keyframes desloca {
+    100% {
+        left: 100px;
+        top: 100px;
+    }
+}
+
+.rede-social-footer{
+    margin-bottom: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rede-footer { 
+    font-size: 17px;
+    color: var(--cor-icones);
+    border: 1px solid var(--cor-icones);
+    border-radius: 100%;
+    padding: 0.5em 0.5em 0.4em 0.5em;
+    margin: 0.3em;
+    position: relative;
+    overflow: hidden;
+}
+
+.rede-footer i {
+    position: relative; 
+}
+
+.rede-footer::before {
+    content: "";
+    width: 66.25px;
+    height: 66.25px;
+    position: absolute;
+    left: -66px;
+    top: 102%;
+    background-color: var(--cor-icones);
+}
+
+.rede-footer:hover i {
+    color: var(--cor-body);
+    transform: scale(1.2);
+}
+
+.rede-footer:hover::before {
+    animation: desloca .5s;
+    left: 0;
+    top: 0;
+}
+
+@keyframes desloca {
+    0% {
+        left: 100%;
+        top: 0%;
+    }
+    100% {
+        left: 0;
+        top: 0;
+    }
+}
+
+
+.direitos-autorais{
+    margin-bottom: 1em;
+    font-size: 13px;
+    color: var(--cor-primaria);
+}
+
+@media (max-width: 768px) {
+    .texto-footer h1 {
+        font-size: 36px;
+        margin: 0.3em 0;
+    }
+
+    .texto-footer p {
+        width: 100%;
+        font-size: 15px;
+        margin-bottom: 2em;
+    }
+
+    .icon-email {
+        width: 60px;
+        height: 60px;
+        font-size: 45px;
+    }
+
+    .icon-email::before {
+        width: 60px;
+        height: 60px;
+    }
+
+    .rede-social-footer {
+        margin-bottom: 2em;
+    }
+
+    .rede-footer {
+        font-size: 14px;
+        padding: 0.4em;
+    }
+
+    .rede-footer::before {
+        width: 50px;
+        height: 50px;
+    }
+
+    .direitos-autorais {
+        font-size: 11px;
+    }
+    .icon-email {
+        width: 50px;
+        height: 50px;
+        font-size: 35px;
+        padding: 0.4em 0 0 0.4em;
+    }
+}
+
+@media (max-width: 408px) {
+    .icon-email {
+        width: 50px;
+        height: 50px;
+        font-size: 35px;
+        padding: 0.4em 0 0 0.4em;
+    }
+}
+
+@media (max-width: 375px){
+    .texto-footer h1{
+        font-size: 25px;
+    }
+
+    .texto-footer p{
+        font-size: 10px;
+    }
+
+    .direitos-autorais {
+        font-size: 8px;
+    }
+
+    .icon-email {
+        width: 50px;
+        height: 50px;
+        font-size: 35px;
+        padding: 0.4em 0 0 0.4em;
+    }
+
+    .icon-email::before {
+        width: 50px;
+        height: 50px;
+    }
+
+}
+
